@@ -1,6 +1,6 @@
-var runLengthEncoding = function(str){
+var runLengthEncoding = function (str) {
   let result = new Map()
-  let rle = [] 
+  let rle = []
   str.split("").forEach((e) => {
     if (!result.has(e)) {
       result.forEach((val, key) => {
@@ -12,9 +12,9 @@ var runLengthEncoding = function(str){
       result.set(e, result.get(e) + 1)
     }
   })
-  
+
   result.forEach((val, key) => {
-   rle.push([val, key])
+    rle.push([val, key])
   })
   return rle
 }
